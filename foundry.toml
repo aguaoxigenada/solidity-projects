@@ -13,4 +13,13 @@ line_length = 120
 tab_width = 4
 bracket_spacing = false
 
+# Named RPC aliases. Lets you write `--rpc-url sepolia` instead of the full URL.
+# Values are pulled from your environment (see .env.example), so no secrets live here.
+[rpc_endpoints]
+sepolia = "${SEPOLIA_RPC_URL}"
+
+# Enables `--verify` to publish source on Etherscan for the `sepolia` chain.
+[etherscan]
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
+
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
